@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func resetTapped(_ sender: UIButton) {
+        Task.deleteAll(viewContext: getViewContext()!)
+        allTask = []
+    }
 }
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
@@ -48,6 +52,14 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
         let cell = todoListTableView.dequeueReusableCell(withIdentifier: "CellTo", for: indexPath)
         cell.textLabel?.text = "\(allTask[indexPath.row].taskName!)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let chosenTask = allTask[indexPath.row]
+            allTask.remove(at: indexPath.row)
+            Task.delete(viewContext: getViewContext()!, taskToBeDeleted: chosenTask)
+        }
     }
 }
 

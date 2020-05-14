@@ -38,6 +38,18 @@ extension Task {
         }
     }
     
+    static func deleteAll(viewContext : NSManagedObjectContext) {
+        let tasks = fetchAll(viewContext: viewContext)
+        for task in tasks {
+            self.delete(viewContext: viewContext, taskToBeDeleted: task)
+        }
+    }
+    
+    static func delete(viewContext : NSManagedObjectContext, taskToBeDeleted : Task) {
+        viewContext.delete(taskToBeDeleted)
+        print("\(taskToBeDeleted.taskName) is deleted")
+    }
+    
 }
 //SubTask is coming from Entity Task
 extension SubTask {
