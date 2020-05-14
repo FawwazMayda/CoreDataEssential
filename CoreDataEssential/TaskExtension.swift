@@ -46,8 +46,13 @@ extension Task {
     }
     
     static func delete(viewContext : NSManagedObjectContext, taskToBeDeleted : Task) {
+         print("\(String(describing: taskToBeDeleted.taskName)) is deleted")
         viewContext.delete(taskToBeDeleted)
-        print("\(taskToBeDeleted.taskName) is deleted")
+        do {
+            try viewContext.save()
+        } catch {
+            print("Erro deleting")
+        }
     }
     
 }

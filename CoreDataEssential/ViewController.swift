@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var taskTextField: UITextField!
     
     @IBOutlet weak var todoListTableView: UITableView!
+    var helper : CoreDataHelper!
     
     var allTask = [Task]() {
         didSet {
@@ -26,7 +27,8 @@ class ViewController: UIViewController {
         todoListTableView.dataSource = self
         taskTextField.delegate = self
         taskTextField.placeholder = "Enter your Task"
-        allTask = Task.fetchAll(viewContext: getViewContext()!)
+        helper = CoreDataHelper(viewContext: getViewContext()!)
+        allTask = helper.fetchAll()
     }
 
     @IBAction func saveTapped(_ sender: UIButton) {
