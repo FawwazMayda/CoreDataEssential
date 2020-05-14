@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         todoListTableView.delegate = self
         todoListTableView.dataSource = self
         taskTextField.delegate = self
+        taskTextField.placeholder = "Enter your Task"
         allTask = Task.fetchAll(viewContext: getViewContext()!)
     }
 
