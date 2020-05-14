@@ -14,6 +14,7 @@
 		4DFFA166246D143D00DB9824 /* CoreDataEssential.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFA164246D143D00DB9824 /* CoreDataEssential.xcdatamodeld */; };
 		4DFFA168246D143E00DB9824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFFA167246D143E00DB9824 /* Assets.xcassets */; };
 		4DFFA16B246D143E00DB9824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFFA169246D143E00DB9824 /* LaunchScreen.storyboard */; };
+		4DFFA173246D1C5E00DB9824 /* TaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFA172246D1C5E00DB9824 /* TaskExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4DFFA167246D143E00DB9824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DFFA16A246D143E00DB9824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DFFA16C246D143E00DB9824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFFA172246D1C5E00DB9824 /* TaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4DFFA15B246D143D00DB9824 /* AppDelegate.swift */,
 				4DFFA15D246D143D00DB9824 /* SceneDelegate.swift */,
 				4DFFA15F246D143D00DB9824 /* ViewController.swift */,
+				4DFFA172246D1C5E00DB9824 /* TaskExtension.swift */,
 				4DFFA161246D143D00DB9824 /* Main.storyboard */,
 				4DFFA167246D143E00DB9824 /* Assets.xcassets */,
 				4DFFA169246D143E00DB9824 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				4DFFA160246D143D00DB9824 /* ViewController.swift in Sources */,
 				4DFFA166246D143D00DB9824 /* CoreDataEssential.xcdatamodeld in Sources */,
 				4DFFA15C246D143D00DB9824 /* AppDelegate.swift in Sources */,
+				4DFFA173246D1C5E00DB9824 /* TaskExtension.swift in Sources */,
 				4DFFA15E246D143D00DB9824 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
